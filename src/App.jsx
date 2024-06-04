@@ -4,6 +4,9 @@ import About from "./pages/About";
 import Vans from "/.pages/Vans";
 import VanDetail from "./pages/VanDetail";
 import Layout from "./components/Layout";
+import Dashboard from "./pages/Host/Dashboard";
+import Income from "./pages/Host/Income";
+import Reviews from "./pages/Host/Reviews";
 
 import "./server";
 
