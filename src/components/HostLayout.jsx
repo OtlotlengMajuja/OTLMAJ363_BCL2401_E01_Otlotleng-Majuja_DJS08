@@ -9,6 +9,7 @@ export default function HostLayout() {
         <Link to="/host/income">Income</Link>
         <Link to="/host/reviews">Reviews</Link>
       </nav>
+      <Outlet />
     </>
   );
 }
