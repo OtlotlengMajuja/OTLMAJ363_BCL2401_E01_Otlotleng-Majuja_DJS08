@@ -23,7 +23,7 @@ function App() {
     <BrowserRouter>
       <header>
         <nav>
-          <Link></Link>
+          <Link to="/about">About</Link>
         </nav>
       </header>
       <Routes>
