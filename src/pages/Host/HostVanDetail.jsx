@@ -1,9 +1,19 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 export default function HostVanDetail() {
+  const { id } = useParams();
   const [currentVan, setCurrentVan] = React.useState(null);
 
-  React.useEffect(() => {}, []);
+  React.useEffect(() => {
+    fetch(`/api/host/vans/${id}`)
+      .then((res) => res.json())
+      .then((data) => setCurrentVan(data.vans));
+  }, []);
 
-  return <h1>Host Vans List Page</h1>;
+  if (!currentVan) {
+    return <h1>Loading...</h1>;
+  }
+
+  return <h1>Host Van Detail Page</h1>;
 }
