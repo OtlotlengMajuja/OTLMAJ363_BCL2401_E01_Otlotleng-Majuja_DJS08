@@ -34,9 +34,24 @@ export default function HostVanDetail() {
         </div>
 
         <nav className="host-van-detail-nav">
-          <NavLink to=".">Details</NavLink>
-          <NavLink to="pricing">Pricing</NavLink>
-          <NavLink to="photos">Photos</NavLink>
+          <NavLink
+            to="."
+            style={({ isActive }) => (isActive ? activeStyles : null)}
+          >
+            Details
+          </NavLink>
+          <NavLink
+            to="pricing"
+            style={({ isActive }) => (isActive ? activeStyles : null)}
+          >
+            Pricing
+          </NavLink>
+          <NavLink
+            to="photos"
+            style={({ isActive }) => (isActive ? activeStyles : null)}
+          >
+            Photos
+          </NavLink>
         </nav>
 
         <Outlet />
