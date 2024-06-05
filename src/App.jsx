@@ -3,12 +3,15 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Vans from "./pages/Vans/Vans";
 import VanDetail from "./pages/Vans/VanDetail";
-import Layout from "./components/Layout";
 import Dashboard from "./pages/Host/Dashboard";
 import Income from "./pages/Host/Income";
 import Reviews from "./pages/Host/Reviews";
 import HostVans from "./pages/Host/HostVans";
 import HostVanDetail from "./pages/Host/HostVanDetail";
+import HostVanInfo from "./pages/Host/HostVanInfo";
+import HostVanPricing from "./pages/Host/HostVanPricing";
+import HostVanPhotos from "./pages/Host/HostVanPhotos";
+import Layout from "./components/Layout";
 import HostLayout from "./components/HostLayout";
 
 import "./server";
@@ -28,7 +31,11 @@ export default function App() {
             <Route path="income" element={<Income />} />
             <Route path="reviews" element={<Reviews />} />
             <Route path="vans" element={<HostVans />} />
-            <Route path="vans/:id" element={<HostVanDetail />} />
+            <Route path="vans/:id" element={<HostVanDetail />}>
+              <Route index element={<h2>Detailed info goes here</h2>} />
+              <Route path="pricing" element={<h2>Pricing goes here</h2>} />
+              <Route path="photos" element={<h2>Photos go here</h2>} />
+            </Route>
           </Route>
         </Route>
       </Routes>
