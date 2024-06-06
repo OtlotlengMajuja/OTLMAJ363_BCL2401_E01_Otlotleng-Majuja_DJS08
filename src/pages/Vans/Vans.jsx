@@ -18,8 +18,9 @@ export default function Vans() {
         setVans(data);
       } catch (err) {
         setError(err);
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     }
 
     loadVans();
