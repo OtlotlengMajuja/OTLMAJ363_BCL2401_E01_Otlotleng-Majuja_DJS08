@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export default function VanDetail() {
   const params = useParams();
@@ -13,7 +13,10 @@ export default function VanDetail() {
 
   return (
     <div className="van-detail-container">
-      {van ? ( //Conditional rendering because van state initialization is null
+      <Link to=".." relative="path" className="back-button">
+        &larr; <span>Back to all vans</span>
+      </Link>
+      {van ? (
         <div className="van-detail">
           <img src={van.imageUrl} />
           <i className={`van-type ${van.type} selected`}>{van.type}</i>
