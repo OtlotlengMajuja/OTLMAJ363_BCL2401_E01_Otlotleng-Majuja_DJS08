@@ -7,11 +7,15 @@ export default function Login() {
     email: "",
     password: "",
   });
+  const [status, setStatus] = React.useState("idle");
   const location = useLocation();
 
   function handleSubmit(e) {
     e.preventDefault();
-    loginUser(loginFormData).then((data) => console.log(data));
+    setStatus("submitting");
+    loginUser(loginFormData).then((data) => {
+      setStatus("idle");
+    });
   }
 
   function handleChange(e) {
