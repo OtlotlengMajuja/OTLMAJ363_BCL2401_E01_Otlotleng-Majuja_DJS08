@@ -8,13 +8,19 @@ export default function Login() {
     password: "",
   });
   const [status, setStatus] = React.useState("idle");
+  const [error, setError] = React.useState(null);
   const location = useLocation();
 
   function handleSubmit(e) {
     e.preventDefault();
     setStatus("submitting");
     loginUser(loginFormData)
-      .then((data) => {})
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        setError(err);
+      })
       .finally(() => {
         setStatus("idle");
       });
