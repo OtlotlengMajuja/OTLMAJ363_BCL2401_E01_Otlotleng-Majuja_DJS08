@@ -5,6 +5,7 @@ import { getVans } from "../../api";
 export default function Vans() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [vans, setVans] = React.useState([]);
+  const [loading, setLoading] = React.useState(false);
 
   const typeFilter = searchParams.get("type");
 
