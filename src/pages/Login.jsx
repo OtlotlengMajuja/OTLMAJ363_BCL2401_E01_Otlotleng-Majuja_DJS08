@@ -13,9 +13,11 @@ export default function Login() {
   function handleSubmit(e) {
     e.preventDefault();
     setStatus("submitting");
-    loginUser(loginFormData).then((data) => {
-      setStatus("idle");
-    });
+    loginUser(loginFormData)
+      .then((data) => {})
+      .finally(() => {
+        setStatus("idle");
+      });
   }
 
   function handleChange(e) {
