@@ -5,6 +5,8 @@ export default function Vans() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [vans, setVans] = React.useState([]);
 
+  const typeFilter = searchParams.get("type");
+
   React.useEffect(() => {
     fetch("/api/vans")
       .then((res) => res.json())
