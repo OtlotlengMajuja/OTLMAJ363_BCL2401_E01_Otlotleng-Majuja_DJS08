@@ -6,6 +6,7 @@ export default function Login() {
     email: "",
     password: "",
   });
+  const location = useLocation();
 
   function handleSubmit(e) {
     e.preventDefault();
