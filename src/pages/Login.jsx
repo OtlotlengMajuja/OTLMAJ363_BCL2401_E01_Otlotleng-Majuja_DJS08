@@ -17,6 +17,7 @@ export default function Login() {
     loginUser(loginFormData)
       .then((data) => {
         console.log(data);
+        setError(null);
       })
       .catch((err) => {
         setError(err);
