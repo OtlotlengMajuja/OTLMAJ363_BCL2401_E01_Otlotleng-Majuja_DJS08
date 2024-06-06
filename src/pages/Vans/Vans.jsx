@@ -6,7 +6,6 @@ export default function Vans() {
   const [vans, setVans] = React.useState([]);
 
   const typeFilter = searchParams.get("type");
-  console.log(typeFilter);
 
   React.useEffect(() => {
     fetch("/api/vans")
@@ -56,12 +55,15 @@ export default function Vans() {
         >
           Rugged
         </button>
-        <button
-          onClick={() => setSearchParams({})}
-          className="van-type clear-filters"
-        >
-          Clear filter
-        </button>
+
+        {typeFilter ? (
+          <button
+            onClick={() => setSearchParams({})}
+            className="van-type clear-filters"
+          >
+            Clear filter
+          </button>
+        ) : null}
       </div>
       <div className="van-list">{vanElements}</div>
     </div>
