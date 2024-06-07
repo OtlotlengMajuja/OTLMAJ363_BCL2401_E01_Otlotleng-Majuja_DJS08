@@ -20,6 +20,7 @@ export default function Login() {
       .then((data) => {
         console.log(data);
         setError(null);
+        navigate("/host");
       })
       .catch((err) => {
         setError(err);
