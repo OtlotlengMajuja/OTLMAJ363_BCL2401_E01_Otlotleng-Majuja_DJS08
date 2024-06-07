@@ -9,7 +9,9 @@ export default function Login() {
   });
   const [status, setStatus] = React.useState("idle");
   const [error, setError] = React.useState(null);
+
   const location = useLocation();
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
