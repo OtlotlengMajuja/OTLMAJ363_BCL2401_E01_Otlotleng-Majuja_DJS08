@@ -4,7 +4,7 @@
 
 ## Introduction
 
-For this challenge I was given all the required CSS styling in the starter code, then followed along with a Scrimba lesson to create a website for a van renting business.
+For this challenge I was given all the required CSS styling in the starter code, then followed along with a Scrimba lesson to create a website for a van rental business.
 
 ## Project Overview
 
