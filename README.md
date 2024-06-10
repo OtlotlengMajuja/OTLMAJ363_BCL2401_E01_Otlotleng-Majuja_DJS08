@@ -1,4 +1,4 @@
-# DJS08 Project Brief: React Router
+# DJS08 Project: React Router
 
 🎥 INSERT LOOM PRESENTATION LINK: [Here]
 
